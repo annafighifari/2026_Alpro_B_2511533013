@@ -21,13 +21,13 @@ if kode_promo_valid_3013:
     total_diskon_persen_3013 += 15 #diskon voucher
 
     # menghitung nominal diskon dan total bayar
-    nominal_diskon_3013 = total_belanja_3013 + (total_diskon_persen_3013 / 100)
+    nominal_diskon_3013 = total_belanja_3013 * (total_diskon_persen_3013 / 100)
     total_bayar_3013 = total_belanja_3013 - nominal_diskon_3013
 
     # output hasil
     print("\n--- Rincian Pembayaran ---")
-    print(f"Total Diskon    : (total_diskon_persen_3013)% (Rp {nominal_diskon_3013:,.0f})")
-    print(f"Total Bayar     : Rp (total_bayar_3013:,.0f)") 
+    print(f"Total Diskon    : (total_diskon_persen_3013) % (Rp{nominal_diskon_3013:,.0f})")
+    print(f"Total Bayar     : Rp {total_bayar_3013:,.0f}") 
 
     print(f"Total diskon yang anda dapatkan: {total_diskon_persen_3013}%")
         #   output: total diskon yg anda dapatkan: 30% jika belanja > 1 juta, member dan kode promo valid
